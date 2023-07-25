@@ -49,6 +49,9 @@ header{
     height: 100vh;
     color: var(--color-white);
     overflow: hidden;
+//     @media screen and (max-width: 610px) {
+//         max-height: 100vh;
+//     }
 }
 section{
     min-height: 100vh;
@@ -165,7 +168,7 @@ section{
 .header-content{
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    height: 100%;
+    min-height: 100vh;
     .left-header{
         display: flex;
         align-items: center;
@@ -560,6 +563,7 @@ section{
 /* contact */
 .contact-content-con{
     display: flex;
+    flex-direction: column;
     margin-top: 3.5rem;
     .left-contact{
         flex: 2;
@@ -573,14 +577,16 @@ section{
             line-height: 2rem;
         }
         .contact-info{
-            .contact-item{
+            .contact-item{  
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
+                padding: .3rem 0 !important;
                 p{
                     margin: .3rem 0 !important;
                     padding: 0 !important;
                 }
+            
                 .icon{
                     display: grid;
                     grid-template-columns: 4px 1fr;
@@ -589,7 +595,13 @@ section{
                         align-items: center;
                         font-size: 1.3rem;
                     }
+                    span{
+                        padding: 0 2rem;
+                    }
                 }
+            //     span{
+            //         padding: 0 1rem;
+            //     }
             }
         }
         .contact-icon{
@@ -628,7 +640,7 @@ section{
         .input-control{
             margin: 1.5rem 0;
             input,textarea{
-                border-radius: 15%;
+                border-radius: 15px;
                 font-size: inherit;
                 font-family: inherit;
                 font-weight: inherit;
@@ -726,3 +738,5 @@ section{
         }
     }
 }
+
+@import './media';
