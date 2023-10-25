@@ -56,7 +56,8 @@ a {
 header {
   height: 100vh;
   color: var(--color-white);
-  overflow: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 section {
@@ -264,7 +265,7 @@ section {
 .header-content .left-header .image {
   border-radius: var(--br-sm-2);
   height: 90%;
-  width: 68%;
+  width: 100%;     /*initially changing*/
   margin-left: 4rem;
   background-color: black;
   -webkit-transition: all .4s ease-in-out;
@@ -1073,9 +1074,13 @@ section {
     font-size: 2.5rem !important;
   }
   .header-content .left-header .image {
-    margin: 0 auto;
-    width: 90%;
+    margin-left: 0rem;
   }
+  .header-content .left-header {
+    width: 100vw;
+    padding: 0rem 1rem;
+  }
+
   .about-container {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
@@ -1110,9 +1115,7 @@ section {
         grid-template-columns: 1fr;
     padding-bottom: 6rem;
   }
-  .section {
-    padding: 2rem 2.5rem;
-  }
+  
   .main-title h2 {
     font-size: 2rem;
   }
@@ -1143,7 +1146,7 @@ section {
   }
 }
 
-@media screen and (max-width: 1432px) {
+@media screen and (min-width: 1432px) {
   header {
     padding: 0 !important;
   }
@@ -1172,7 +1175,7 @@ section {
   }
 }
 
-@media screen and (max-width: 1070px) {
+@media screen and (min-width: 1070px) {
   .about-container {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
