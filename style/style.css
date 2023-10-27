@@ -1052,6 +1052,9 @@ section {
   header .right-header {
     padding: 2rem;
   }
+  .about{
+    padding: 1rem 1rem;
+  }
   .theme-btn {
     width: 50px;
     height: 50px;
@@ -1100,15 +1103,20 @@ section {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     padding-bottom: 6rem;
+    padding-left: 1rem;
   }
   .about-stats .progress-bars {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
   }
+  .portfolio{
+    padding: 1rem 0.5rem;
+  }
   .portfolios {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     padding-bottom: 6rem;
+    
   }
   .blogs {
     -ms-grid-columns: 1fr;
@@ -1143,6 +1151,9 @@ section {
   }
   .controlls .control {
     margin: 1rem .3rem;
+  }
+  .contact{
+    padding: 0rem 0rem;
   }
 }
 
@@ -1195,6 +1206,7 @@ section {
   .left-header .h-shape {
     display: none;
   }
+  
   .right-header {
     -ms-grid-row: 1;
     grid-row: 1;
@@ -1255,25 +1267,6 @@ section {
   }
   .main-title .bg-text {
     font-size: 3rem;
-  }
-  .controlls {
-    top: auto;
-    bottom: 0;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
-    width: 100%;
-    background-color: var(--color-grey-5);
-  }
-  .controlls .control {
-    margin: 1rem .3rem;
   }
 }
 
