@@ -56,8 +56,8 @@ a {
 header {
   height: 100vh;
   color: var(--color-white);
-  overflow-y: auto;
-  overflow-x: hidden;
+  
+  overflow: hidden;
 }
 
 section {
@@ -1048,6 +1048,8 @@ section {
 @media screen and (max-width: 600px) {
   header {
     padding: 0;
+    overflow-y: auto;
+  overflow-x: hidden;
   }
   header .right-header {
     padding: 2rem;
@@ -1152,8 +1154,15 @@ section {
   .controlls .control {
     margin: 1rem .3rem;
   }
+  .contact-container{
+    margin-top: 3rem;
+    margin-left: 1rem;
+  }
   .contact{
     padding: 0rem 0rem;
+  }
+  .contact-content-con .right-contact {
+    margin-left: 0rem;
   }
 }
 
@@ -1220,7 +1229,7 @@ section {
     margin-left: 0rem;
   }
   .header-content .left-header {
-    width: 100vw;
+    width: 100%;
     padding: 0rem 1rem;
   }
 
