@@ -1164,6 +1164,12 @@ section {
   .contact-content-con .right-contact {
     margin-left: 0rem;
   }
+  .contact-item{
+    font-size: 1rem;
+  }
+  .contact-content-con .left-contact .contact-info .contact-item {
+    justify-content: unset;
+  }
 }
 
 @media screen and (min-width: 1432px) {
