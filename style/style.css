@@ -56,7 +56,6 @@ a {
 header {
   height: 100vh;
   color: var(--color-white);
-  
   overflow: hidden;
 }
 
@@ -265,7 +264,7 @@ section {
 .header-content .left-header .image {
   border-radius: var(--br-sm-2);
   height: 90%;
-  width: 68%;     /*initially changing*/
+  width: 68%;
   margin-left: 4rem;
   background-color: black;
   -webkit-transition: all .4s ease-in-out;
@@ -273,6 +272,7 @@ section {
 }
 
 .header-content .left-header .image img {
+  width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -317,7 +317,6 @@ section {
 
 /* About */
 .about-container {
-  width : 69vw;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[2];
@@ -1048,14 +1047,9 @@ section {
 @media screen and (max-width: 600px) {
   header {
     padding: 0;
-    overflow-y: auto;
-  overflow-x: hidden;
   }
   header .right-header {
     padding: 2rem;
-  }
-  .about{
-    padding: 1rem 1rem;
   }
   .theme-btn {
     width: 50px;
@@ -1069,10 +1063,6 @@ section {
   .left-header .h-shape {
     display: none;
   }
-  .header-content .left-header .image {
-    margin-left: 0rem;
-    width: 100%;
-  }
   .right-header {
     -ms-grid-row: 1;
     grid-row: 1;
@@ -1082,15 +1072,13 @@ section {
   .right-header .name {
     font-size: 2.5rem !important;
   }
-  .header-content .left-header {
-    width: 100vw;
-    padding: 0rem 1rem;
+  .header-content .left-header .image {
+    margin: 0 auto;
+    width: 90%;
   }
-
   .about-container {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-    width: auto;
   }
   .about-container .right-about {
     -ms-grid-columns: 1fr;
@@ -1107,27 +1095,24 @@ section {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     padding-bottom: 6rem;
-    padding-left: 1rem;
   }
   .about-stats .progress-bars {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
   }
-  .portfolio{
-    padding: 1rem 0.5rem;
-  }
   .portfolios {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     padding-bottom: 6rem;
-    
   }
   .blogs {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     padding-bottom: 6rem;
   }
-  
+  .section {
+    padding: 2rem 2.5rem;
+  }
   .main-title h2 {
     font-size: 2rem;
   }
@@ -1156,127 +1141,9 @@ section {
   .controlls .control {
     margin: 1rem .3rem;
   }
-  .contact-container{
-    margin-top: 3rem;
-    margin-left: 1rem;
-  }
-  .contact{
-    padding: 0rem 0rem;
-  }
-  .contact-content-con .right-contact {
-    margin-left: 0rem;
-  }
-  .contact-item{
-    font-size: 1rem;
-  }
-  .contact-content-con .left-contact .contact-info .contact-item {
-    justify-content: unset;
-  }
 }
 
-
-@media only screen and (min-width : 600px) and (max-width : 992px) {
-  header {
-    padding: 0;
-    overflow-x: hidden;
-    overflow-y: auto;
-  }
-  header .right-header {
-    padding: 2rem;
-  }
-  .theme-btn {
-    width: 50px;
-    height: 50px;
-  }
-  .header-content {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-    padding-bottom: 6rem;
-  }
-  .left-header .h-shape {
-    display: none;
-  }
-  
-  .right-header {
-    -ms-grid-row: 1;
-    grid-row: 1;
-    width: 120%;
-    margin: 0 auto;
-  }
-  .right-header .name {
-    font-size: 2.5rem !important;
-  }
-  .header-content .left-header .image {
-    margin-left: 0rem;
-    height: 100%;
-  }
-  .header-content .left-header {
-    width: 100%;
-    padding: 0rem 1rem;
-  }
-
-  .about-container {
-    width: auto;
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-  }
-  .about-container .right-about {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-    padding-top: 2.5rem;
-  }
-  .about-container .left-about {
-    padding-right: 0;
-  }
-  .about-container .left-about p {
-    padding-left: 0;
-  }
-  .timeline {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-    padding-bottom: 6rem;
-  }
-  .about-stats .progress-bars {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-  }
-  .portfolios {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-    padding-bottom: 6rem;
-  }
-  .blogs {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-    padding-bottom: 6rem;
-  }
-  
-  .main-title h2 {
-    font-size: 2rem;
-  }
-  .main-title span {
-    font-size: 2.5rem;
-  }
-  .main-title .bg-text {
-    font-size: 3rem;
-  }
-  section{
-    padding: 3rem 2rem;
-  }
-  .image{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-  }
-  .portfolios .portfolio-item img {
-    width: 70%;
-  }
-} 
-
-
-
-@media screen and (min-width: 1432px) {
+@media screen and (max-width: 1432px) {
   header {
     padding: 0 !important;
   }
@@ -1303,29 +1170,15 @@ section {
     margin-left: 0 !important;
     margin-top: 1.5rem;
   }
-} 
-/*# sourceMappingURL=style.css.map */
+}
 
-
-
-/* @media only screen and (min-width: 768px) {
-  .header-content{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .left-header .h-shape {
-    display: block;
-  }
+@media screen and (max-width: 1070px) {
   .about-container {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-
   }
   .about-container .right-about {
     padding: 2.5rem;
-    
   }
   .portfolios {
     -ms-grid-columns: 1fr 1fr;
@@ -1336,7 +1189,7 @@ section {
         grid-template-columns: 1fr 1fr;
   }
   .main-title h2 {
-    font-size: 10rem;
+    font-size: 4rem;
   }
   .main-title h2 span {
     font-size: 4rem;
@@ -1344,4 +1197,5 @@ section {
   .main-title h2 .bg-text {
     font-size: 5rem;
   }
-}   */
+}
+/*# sourceMappingURL=style.css.map */
