@@ -176,6 +176,19 @@ const PremiumPortfolio = () => {
 
   const projects = [
     {
+      title: 'HealthPotli',
+      subtitle: 'Online Pharmacy (Over 1.5 Lakhs Users)',
+      description: 'Online pharmacy in Central India, offering medicines, health supplies, and wellness products. Users can upload e-prescriptions, access organic and gluten-free items, and enjoy doorstep delivery, ensuring convenience, quality, and authenticity.',
+      image: 'https://images.unsplash.com/photo-1576602976047-174e57a47881?w=800&h=600&fit=crop&auto=format',
+      tech: ['Django', 'RDS', 'AWS', 'Vue.js', 'Redis', 'Razorpay', 'Zoho Books', 'Firebase', 'Swagger', 'OpenAI', 'Msg91'],
+      live: 'https://healthpotli.com',
+      github: 'https://github.com/PANxxj',
+      featured: true,
+      metrics: { users: '1.5 Lakhs+', uptime: '99.9%', performance: '+60%' },
+      gradient: 'from-green-600 to-teal-600',
+      // role: 'Backend Developer - Integrated Zoho Books to automate accounting (60% reduction in manual work) and developed the Pathology Lab Module for at-home diagnostics with online booking and report generation.'
+    },
+    {
       title: 'Covesto Trading Platform',
       subtitle: 'Enterprise FinTech Solution',
       description: 'Revolutionary virtual trading platform with real-time market data, advanced analytics, and microservices architecture. Built to handle 10,000+ concurrent users with 99.9% uptime.',
@@ -385,11 +398,11 @@ const PremiumPortfolio = () => {
 
               <div className="space-y-6">
                 <p className="text-xl text-gray-300 font-medium">Hello, I'm</p>
-                <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-none">
+                <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-none">
                   <span className="bg-gradient-to-r from-white via-blue-100 to-blue-200 bg-clip-text text-transparent">
-                    Pankaj
+                    Pankaj{" "}
                   </span>
-                  <br />
+                  {/* <br /> */}
                   <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                     Sahu
                   </span>
@@ -414,7 +427,16 @@ const PremiumPortfolio = () => {
                 <span>Let's collaborate</span>
               </button>
               
-              <button className="px-8 py-4 border border-white/20 rounded-2xl font-semibold hover:bg-white/10 transition-all duration-300 backdrop-blur-sm flex items-center space-x-3 group">
+              <button 
+                onClick={() => {
+                  const link = document.createElement('a');
+                  link.href = '/media/updated_resume.pdf';
+                  link.download = 'Pankaj_Sahu_Resume.pdf';
+                  document.body.appendChild(link);
+                  link.click();
+                  document.body.removeChild(link);
+                }}
+                className="px-8 py-4 border border-white/20 rounded-2xl font-semibold hover:bg-white/10 transition-all duration-300 backdrop-blur-sm flex items-center space-x-3 group cursor-pointer">
                 <Download className="w-5 h-5 group-hover:animate-bounce" />
                 <span>Download CV</span>
               </button>
@@ -423,9 +445,9 @@ const PremiumPortfolio = () => {
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-20 max-w-4xl mx-auto">
               {[
-                { value: '50+', label: 'Projects Delivered', icon: <Star className="w-6 h-6" /> },
-                { value: '2.5+', label: 'Years Experience', icon: <Calendar className="w-6 h-6" /> },
-                { value: '15K+', label: 'Active Users', icon: <Users className="w-6 h-6" /> },
+                { value: '10+', label: 'Projects Delivered', icon: <Star className="w-6 h-6" /> },
+                { value: '3+', label: 'Years Experience', icon: <Calendar className="w-6 h-6" /> },
+                { value: '2Lakhs+', label: 'Active Users', icon: <Users className="w-6 h-6" /> },
                 { value: '99.9%', label: 'System Uptime', icon: <TrendingUp className="w-6 h-6" /> }
               ].map((stat, index) => (
                 <div 
@@ -466,7 +488,7 @@ const PremiumPortfolio = () => {
               <div className="bg-white/5 backdrop-blur-xl rounded-3xl p-8 border border-white/10 shadow-2xl hover:shadow-blue-500/10 transition-all duration-500">
                 <h3 className="text-2xl font-semibold mb-6 text-blue-300">My Journey</h3>
                 <p className="text-gray-300 leading-relaxed text-lg mb-6">
-                  I'm a passionate fullstack developer with 2.5+ years of experience creating scalable, 
+                  I'm a passionate fullstack developer with 3+ years of experience creating scalable, 
                   high-performance web applications. My expertise spans across modern frontend frameworks, 
                   robust backend systems, and cloud infrastructure.
                 </p>
@@ -526,7 +548,7 @@ const PremiumPortfolio = () => {
                 <div className="mt-8 pt-8 border-t border-white/10">
                   <h4 className="font-semibold mb-4 text-blue-300">Core Technologies</h4>
                   <div className="flex flex-wrap gap-3">
-                    {['React.js', 'Django', 'Node.js', 'AWS', 'PostgreSQL', 'Docker'].map((tech) => (
+                    {['Python','Django', 'React.js', 'FastAPI', 'AWS', 'PostgreSQL',"MongoDB","Redis","WebSockets", 'Docker'].map((tech) => (
                       <span key={tech} className="px-4 py-2 bg-white/10 rounded-full text-sm text-gray-300 border border-white/20 backdrop-blur-sm">
                         {tech}
                       </span>
