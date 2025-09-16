@@ -445,9 +445,9 @@ const PremiumPortfolio = () => {
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-20 max-w-4xl mx-auto">
               {[
-                { value: '10+', label: 'Projects Delivered', icon: <Star className="w-6 h-6" /> },
                 { value: '3+', label: 'Years Experience', icon: <Calendar className="w-6 h-6" /> },
-                { value: '2Lakhs+', label: 'Active Users', icon: <Users className="w-6 h-6" /> },
+                { value: '2 Lakhs+', label: 'Active Users', icon: <Users className="w-6 h-6" /> },
+                { value: '10+', label: 'Projects Delivered', icon: <Star className="w-6 h-6" /> },
                 { value: '99.9%', label: 'System Uptime', icon: <TrendingUp className="w-6 h-6" /> }
               ].map((stat, index) => (
                 <div 
